@@ -12,7 +12,7 @@
             "endpoint": "https://us-central1-lecxitmath.cloudfunctions.net/getSurveyResponses",
             "payload": {
                 "data": {
-                    "token": "AC335ED6B3FE8C936C7F6D6AD3D51",
+                    "token": "",
                     "surveyName": "lec_cat_Lecxit_Final"
                 }
             },
