@@ -57,7 +57,7 @@ const FormComponent = () => {
             exportFiles: {
                 [exportFilesKey]: {
                     id: "",
-                    versioning: {},
+                    versioning: { currentVersion: "0000", currentVersionDate: "", currentVersionChangedBy: ""},
                     sourceType: sourceType || "",
                     ...(endpoint && payload && {
                         endpoint,
