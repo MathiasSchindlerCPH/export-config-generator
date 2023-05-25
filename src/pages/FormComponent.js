@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Form, Input, Button, Select, Divider, Collapse } from 'antd';
+import { Form, Input, Button, Select, Divider, Collapse, Row, Col } from 'antd';
 import { useNavigate } from 'react-router-dom';
 import './FormComponent.css'; // Create a new CSS file for your component
 import EncryptingDynamicInputs from '../customComponents/EncryptingDynamicInputs';
@@ -41,7 +41,8 @@ const FormComponent = () => {
             sourcePath,
             encryptPath,
             filterPath,
-            sortingPath,
+            sortingPathPreRegion,
+            sortingPathPostRegion,
             endpoint,
             payload,
             encryptionKey
@@ -56,8 +57,8 @@ const FormComponent = () => {
             dataSource: dataSource || "",
             exportFiles: {
                 [exportFilesKey]: {
-                    id: "",
-                    versioning: { currentVersion: "0000", currentVersionDate: "", currentVersionChangedBy: ""},
+                    id: subfolder || "",
+                    versioning: { currentVersion: "0000", currentVersionDate: "", currentVersionChangedBy: "" },
                     sourceType: sourceType || "",
                     ...(endpoint && payload && {
                         endpoint,
@@ -69,7 +70,8 @@ const FormComponent = () => {
                         sourcePath: sourcePath || "",
                         encryptPath: encryptPath || "",
                         filterPath: filterPath || "",
-                        sortingPath: sortingPath || "",
+                        sortingPathPreRegion: sortingPathPreRegion || "",
+                        sortingPathPostRegion: sortingPathPostRegion || "",
                     },
                     stringCols: [],
                     timestampCols: [],
@@ -163,9 +165,19 @@ const FormComponent = () => {
                             <Form.Item name="filterPath" label="Path to Filtered Folder">
                                 <Input defaultValue='/scratch/<LAB>/<DATAMGT>/filtered/<DATASOURCE>/<SUBFOLDER>/' />
                             </Form.Item>
-                            <Form.Item name="sortingPath" label="Path to Shared Data">
-                                <Input defaultValue='/scratch/<LAB>/shared_data' />
-                            </Form.Item>
+
+                            <Row gutter={[16, 16]}>
+                                <Col span={12}>
+                                    <Form.Item name="sortingPathPreRegion" label="Path to Shared Data (Before region split):" labelCol={{span: 24}}>
+                                        <Input defaultValue='/scratch/<LAB>/shared_data' />
+                                    </Form.Item>
+                                </Col>
+                                <Col span={12}>
+                                    <Form.Item name="sortingPathPostRegion" label="Path to Shared Data (After region split):" labelCol={{span: 24}}>
+                                        <Input defaultValue='raw/admin/<DATASOURCE>/<SUBFOLDER>' />
+                                    </Form.Item>
+                                </Col>
+                            </Row>
                         </Panel>
                     </Collapse>
 
@@ -204,7 +216,6 @@ const FormComponent = () => {
                             </Collapse>
                         </Panel>
                     </Collapse>
-
 
                     <Form.Item>
                         <Button type="primary" htmlType="submit">
