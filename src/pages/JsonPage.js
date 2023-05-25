@@ -24,10 +24,10 @@ const JsonPage = () => {
   
   return (
     <div>
-      <pre>{JSON.stringify(data, null, 2)}</pre> {/* Display the nested object */}
       <Button type="primary" onClick={handleDownload}>
         Download JSON
       </Button>
+      <pre>{JSON.stringify(data, null, 2)}</pre> {/* Display the nested object */}
     </div>
   );
 };
