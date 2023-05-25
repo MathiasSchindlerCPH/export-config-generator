@@ -1,0 +1,428 @@
+{
+    "dataSource": "qualtrics",
+    "exportFiles": {
+        "lec_cat_Lecxit_Final": {
+            "id": "lec_cat_Lecxit_Final",
+            "versioning": {
+                "currentVersion": "0005",
+                "currentVersionDate": "2023-04-27 11:38:23",
+                "currentVersionChangedBy": "system"
+            },
+            "sourceType": "remote-versions",
+            "endpoint": "https://us-central1-lecxitmath.cloudfunctions.net/getSurveyResponses",
+            "payload": {
+                "data": {
+                    "token": "AC335ED6B3FE8C936C7F6D6AD3D51",
+                    "surveyName": "lec_cat_Lecxit_Final"
+                }
+            },
+            "paths": {
+                "sourcePath": "/scratch/lab_mathlecxit/mathlecxit_datamgt/raw/qualtrics/lec_cat_Lecxit_Final/",
+                "encryptPath": "/scratch/lab_mathlecxit/mathlecxit_datamgt/encrypted/qualtrics/lec_cat_Lecxit_Final/",
+                "filterPath": "/scratch/lab_mathlecxit/mathlecxit_datamgt/filtered/qualtrics/lec_cat_Lecxit_Final/",
+                "sortingPath": "/scratch/lab_mathlecxit/mathlecxit_datamgt/shared_data"
+            },
+            "stringCols": [
+                "school",
+                "student",
+                "friends",
+                "goodSchool",
+                "notGoodSchool",
+                "noAnswerGoodSchool",
+                "studyHard",
+                "notStudyHard",
+                "noAnswerStudyHard",
+                "popular",
+                "notPopular",
+                "noAnswerPopular",
+                "scold",
+                "notScold",
+                "noAnswerScold"
+            ],
+            "timestampCols": [
+                "startDateDayTimestamp",
+                "endDateDayTimestamp"
+            ],
+            "dropCols": [],
+            "encryptionKey": "firebaseId",
+            "encryptionFields": [
+                {
+                    "field": "student",
+                    "includeInReport": true
+                },
+                {
+                    "field": "friends",
+                    "includeInReport": false
+                },
+                {
+                    "field": "goodSchool",
+                    "includeInReport": false
+                },
+                {
+                    "field": "notGoodSchool",
+                    "includeInReport": false
+                },
+                {
+                    "field": "noAnswerGoodSchool",
+                    "includeInReport": false
+                },
+                {
+                    "field": "studyHard",
+                    "includeInReport": false
+                },
+                {
+                    "field": "notStudyHard",
+                    "includeInReport": false
+                },
+                {
+                    "field": "noAnswerStudyHard",
+                    "includeInReport": false
+                },
+                {
+                    "field": "popular",
+                    "includeInReport": false
+                },
+                {
+                    "field": "notPopular",
+                    "includeInReport": false
+                },
+                {
+                    "field": "noAnswerPopular",
+                    "includeInReport": false
+                },
+                {
+                    "field": "scold",
+                    "includeInReport": false
+                },
+                {
+                    "field": "notScold",
+                    "includeInReport": false
+                },
+                {
+                    "field": "noAnswerScold",
+                    "includeInReport": false
+                }
+            ],
+            "filterFields": [
+                {
+                    "student": {
+                        "noConsent": true
+                    }
+                }
+            ],
+            "sortingRegion": {
+                "type": "static",
+                "value": "cat"
+            },
+            "sortingFields": [
+                {
+                    "fieldName": "school",
+                    "type": "dir",
+                    "order": 0
+                }
+            ]
+        },
+        "lec_sur_Lecxit_andalucía": {
+            "id": "lec_sur_Lecxit_andalucía",
+            "versioning": {
+                "currentVersion": "0008",
+                "currentVersionDate": "2023-05-23 17:10:08",
+                "currentVersionChangedBy": "system"
+            },
+            "sourceType": "remote-versions",
+            "endpoint": "https://us-central1-lecxitmath.cloudfunctions.net/getSurveyResponses",
+            "payload": {
+                "data": {
+                    "token": "AC335ED6B3FE8C936C7F6D6AD3D51",
+                    "surveyName": "lec_sur_Lecxit_andalucía"
+                }
+            },
+            "paths": {
+                "sourcePath": "/scratch/lab_mathlecxit/mathlecxit_datamgt/raw/qualtrics/lec_sur_Lecxit_andalucía/",
+                "encryptPath": "/scratch/lab_mathlecxit/mathlecxit_datamgt/encrypted/qualtrics/lec_sur_Lecxit_andalucía/",
+                "filterPath": "/scratch/lab_mathlecxit/mathlecxit_datamgt/filtered/qualtrics/lec_sur_Lecxit_andalucía/",
+                "sortingPath": "/scratch/lab_mathlecxit/mathlecxit_datamgt/shared_data"
+            },
+            "stringCols": [
+                "school",
+                "student",
+                "friends",
+                "goodSchool",
+                "notGoodSchool",
+                "noAnswerGoodSchool",
+                "studyHard",
+                "notStudyHard",
+                "noAnswerStudyHard",
+                "popular",
+                "notPopular",
+                "noAnswerPopular",
+                "scold",
+                "notScold",
+                "noAnswerScold"
+            ],
+            "timestampCols": [
+                "startDateDayTimestamp",
+                "endDateDayTimestamp"
+            ],
+            "dropCols": [],
+            "encryptionKey": "firebaseId",
+            "encryptionFields": [
+                {
+                    "field": "student",
+                    "includeInReport": true
+                },
+                {
+                    "field": "friends",
+                    "includeInReport": false
+                },
+                {
+                    "field": "goodSchool",
+                    "includeInReport": false
+                },
+                {
+                    "field": "notGoodSchool",
+                    "includeInReport": false
+                },
+                {
+                    "field": "noAnswerGoodSchool",
+                    "includeInReport": false
+                },
+                {
+                    "field": "studyHard",
+                    "includeInReport": false
+                },
+                {
+                    "field": "notStudyHard",
+                    "includeInReport": false
+                },
+                {
+                    "field": "noAnswerStudyHard",
+                    "includeInReport": false
+                },
+                {
+                    "field": "popular",
+                    "includeInReport": false
+                },
+                {
+                    "field": "notPopular",
+                    "includeInReport": false
+                },
+                {
+                    "field": "noAnswerPopular",
+                    "includeInReport": false
+                },
+                {
+                    "field": "scold",
+                    "includeInReport": false
+                },
+                {
+                    "field": "notScold",
+                    "includeInReport": false
+                },
+                {
+                    "field": "noAnswerScold",
+                    "includeInReport": false
+                }
+            ],
+            "filterFields": [
+                {
+                    "student": {
+                        "noConsent": true
+                    }
+                }
+            ],
+            "sortingRegion": {
+                "type": "static",
+                "value": "sur"
+            },
+            "sortingFields": [
+                {
+                    "fieldName": "school",
+                    "type": "dir",
+                    "order": 0
+                },
+                {
+                    "fieldName": "endDateDayTimestamp",
+                    "type": "file",
+                    "order": 1
+                }
+            ]
+        },
+        "mat_cat_Math_Final": {
+            "id": "mat_cat_Math_Final",
+            "versioning": {
+                "currentVersion": "0007",
+                "currentVersionDate": "2023-04-20 17:14:45",
+                "currentVersionChangedBy": "system"
+            },
+            "sourceType": "remote-versions",
+            "endpoint": "https://us-central1-lecxitmath.cloudfunctions.net/getSurveyResponses",
+            "payload": {
+                "data": {
+                    "token": "AC335ED6B3FE8C936C7F6D6AD3D51",
+                    "surveyName": "mat_cat_Math_Final"
+                }
+            },
+            "paths": {
+                "sourcePath": "/scratch/lab_mathlecxit/mathlecxit_datamgt/raw/qualtrics/mat_cat_Math_Final/",
+                "encryptPath": "/scratch/lab_mathlecxit/mathlecxit_datamgt/encrypted/qualtrics/mat_cat_Math_Final/",
+                "filterPath": "/scratch/lab_mathlecxit/mathlecxit_datamgt/filtered/qualtrics/mat_cat_Math_Final/",
+                "sortingPath": "/scratch/lab_mathlecxit/mathlecxit_datamgt/shared_data"
+            },
+            "stringCols": [
+                "school",
+                "student",
+                "friends",
+                "goodSchool",
+                "notGoodSchool",
+                "noAnswerGoodSchool",
+                "studyHard",
+                "notStudyHard",
+                "noAnswerStudyHard",
+                "popular",
+                "notPopular",
+                "noAnswerPopular",
+                "scold",
+                "notScold",
+                "noAnswerScold"
+            ],
+            "timestampCols": [
+                "startDateDayTimestamp",
+                "endDateDayTimestamp"
+            ],
+            "dropCols": [],
+            "encryptionKey": "firebaseId",
+            "encryptionFields": [
+                {
+                    "field": "student",
+                    "includeInReport": true
+                },
+                {
+                    "field": "friends",
+                    "includeInReport": false
+                },
+                {
+                    "field": "goodSchool",
+                    "includeInReport": false
+                },
+                {
+                    "field": "notGoodSchool",
+                    "includeInReport": false
+                },
+                {
+                    "field": "noAnswerGoodSchool",
+                    "includeInReport": false
+                },
+                {
+                    "field": "studyHard",
+                    "includeInReport": false
+                },
+                {
+                    "field": "notStudyHard",
+                    "includeInReport": false
+                },
+                {
+                    "field": "noAnswerStudyHard",
+                    "includeInReport": false
+                },
+                {
+                    "field": "popular",
+                    "includeInReport": false
+                },
+                {
+                    "field": "notPopular",
+                    "includeInReport": false
+                },
+                {
+                    "field": "noAnswerPopular",
+                    "includeInReport": false
+                },
+                {
+                    "field": "scold",
+                    "includeInReport": false
+                },
+                {
+                    "field": "notScold",
+                    "includeInReport": false
+                },
+                {
+                    "field": "noAnswerScold",
+                    "includeInReport": false
+                }
+            ],
+            "filterFields": [
+                {
+                    "student": {
+                        "noConsent": true
+                    }
+                }
+            ],
+            "sortingRegion": {
+                "type": "static",
+                "value": "cat"
+            },
+            "sortingFields": [
+                {
+                    "fieldName": "school",
+                    "type": "dir",
+                    "order": 0
+                },
+                {
+                    "fieldName": "endDateDayTimestamp",
+                    "type": "file",
+                    "order": 1
+                }
+            ]
+        },
+        "lec_all_perfil_dinamizadores": {
+            "id": "lec_all_perfil_dinamizadores",
+            "versioning": {
+                "currentVersion": "0002",
+                "currentVersionDate": "2023-05-23 17:10:38",
+                "currentVersionChangedBy": "system"
+            },
+            "sourceType": "remote-versions",
+            "endpoint": "https://us-central1-lecxitmath.cloudfunctions.net/getSurveyResponses",
+            "payload": {
+                "data": {
+                    "token": "AC335ED6B3FE8C936C7F6D6AD3D51",
+                    "surveyName": "lec_all_perfil_dinamizadores"
+                }
+            },
+            "paths": {
+                "sourcePath": "/scratch/lab_mathlecxit/mathlecxit_datamgt/raw/qualtrics/lec_all_perfil_dinamizadores/",
+                "encryptPath": "/scratch/lab_mathlecxit/mathlecxit_datamgt/encrypted/qualtrics/lec_all_perfil_dinamizadores/",
+                "filterPath": "/scratch/lab_mathlecxit/mathlecxit_datamgt/filtered/qualtrics/lec_all_perfil_dinamizadores/",
+                "sortingPath": "/scratch/lab_mathlecxit/mathlecxit_datamgt/shared_data"
+            },
+            "stringCols": [
+                "Q2.1"
+            ],
+            "timestampCols": [
+                "startDateDayTimestamp",
+                "endDateDayTimestamp"
+            ],
+            "dropCols": [],
+            "encryptionKey": "firebaseId",
+            "encryptionFields": [],
+            "filterFields": [],
+            "sortingRegion": {
+                "type": "dynamic",
+                "fieldObject": {
+                    "fieldName": "Q2.1",
+                    "possibleValues": {
+                        "1": "cat",
+                        "2": "sur"
+                    }
+                }
+            },
+            "sortingFields": [
+                {
+                    "fieldName": "endDateDayTimestamp",
+                    "type": "file",
+                    "order": 0
+                }
+            ]
+        }
+    }
+}
