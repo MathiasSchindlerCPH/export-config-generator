@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Form, Input, Button, Select, Divider, Collapse, Row, Col } from 'antd';
+import { Form, Input, Button, Select, Divider, Collapse, Row, Col, Checkbox } from 'antd';
 import { useNavigate } from 'react-router-dom';
 import './FormComponent.css'; // Create a new CSS file for your component
 import EncryptingDynamicInputs from '../customComponents/EncryptingDynamicInputs';
@@ -13,6 +13,7 @@ const FormComponent = () => {
     const [encryptingInputs, setEncryptingInputs] = useState([]);
     const [filteringInputs, setFilteringInputs] = useState([]);
     const [sortingInputs, setSortingInputs] = useState([]);
+    const [includeNoConsent, setIncludeNoConsent] = useState(false);
 
     const handleEncryptingInputsChange = (updatedInputs) => {
         setEncryptingInputs(updatedInputs);
@@ -27,6 +28,10 @@ const FormComponent = () => {
     const handleSortingInputsChange = (updatedInputs) => {
         setSortingInputs(updatedInputs);
         console.log(sortingInputs);
+    };
+
+    const handleIncludeNoConsentChange = (event) => {
+        setIncludeNoConsent(event.target.checked);
     };
 
     const { Panel } = Collapse;
@@ -49,6 +54,9 @@ const FormComponent = () => {
         } = values;
 
         const encryptFieldsForJson = encryptingInputs.map(({ field, includeInReport }) => ({ field, includeInReport }));
+        const filterFieldsForJson = includeNoConsent
+            ? [{ student: { noConsent: true } }]
+            : [];
         const sortFieldsForJson = sortingInputs.map(({ fieldName, type, order }) => ({ fieldName, type, order }));
 
         const exportFilesKey = subfolder; // Use subfolder as the key
@@ -78,7 +86,7 @@ const FormComponent = () => {
                     dropCols: [],
                     encryptionKey: encryptionKey || "",
                     encryptionFields: encryptFieldsForJson || [],
-                    filterFields: [],
+                    filterFields: filterFieldsForJson || [],
                     sortingRegion: [],
                     sortingFields: sortFieldsForJson || [],
                 },
@@ -168,12 +176,12 @@ const FormComponent = () => {
 
                             <Row gutter={[16, 16]}>
                                 <Col span={12}>
-                                    <Form.Item name="sortingPathPreRegion" label="Path to Shared Data (Before region split):" labelCol={{span: 24}}>
+                                    <Form.Item name="sortingPathPreRegion" label="Path to Shared Data (Before region split):" labelCol={{ span: 24 }}>
                                         <Input defaultValue='/scratch/<LAB>/shared_data' />
                                     </Form.Item>
                                 </Col>
                                 <Col span={12}>
-                                    <Form.Item name="sortingPathPostRegion" label="Path to Shared Data (After region split):" labelCol={{span: 24}}>
+                                    <Form.Item name="sortingPathPostRegion" label="Path to Shared Data (After region split):" labelCol={{ span: 24 }}>
                                         <Input defaultValue='raw/admin/<DATASOURCE>/<SUBFOLDER>' />
                                     </Form.Item>
                                 </Col>
@@ -206,6 +214,11 @@ const FormComponent = () => {
                             </Collapse>
                             <Collapse ghost>
                                 <Panel header="Filter Fields" key="1">
+                                    <Form.Item>
+                                        <Checkbox onChange={handleIncludeNoConsentChange}>
+                                            Include <code className="code-snippet">{JSON.stringify({ student: { noConsent: true } })}</code>
+                                        </Checkbox>
+                                    </Form.Item>
                                     <FilteringDynamicInputs onInputChange={handleFilteringInputsChange} />
                                 </Panel>
                             </Collapse>
